@@ -1,0 +1,41 @@
+{
+  "name": "helenmedia",
+  "version": "0.1.0",
+  "description": "Helen Media Site - Design dir",
+  "main": "index.html",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ADeoZ/helenmedia.git"
+  },
+  "keywords": [
+    "Helen",
+    "Media"
+  ],
+  "author": "Aleksey Denisov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ADeoZ/helenmedia/issues"
+  },
+  "homepage": "https://github.com/ADeoZ/helenmedia#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.14.0",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
+  }
+}
