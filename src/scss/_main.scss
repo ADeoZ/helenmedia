@@ -1,0 +1,20 @@
+// sizes
+$maxwidth: 1300px;
+
+// colors
+$creamy: #FFF7EA;
+
+
+html {
+  font-size: 16px;
+}
+
+body {
+  @include fontCirce;
+  background-color: $creamy;
+}
+
+.main {
+  max-width: $maxwidth;
+  @include mc;
+}

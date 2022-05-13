@@ -1,0 +1,43 @@
+.header {
+  max-width: $maxwidth;
+  @include mc;
+  @include flex(space-between);
+
+  margin-top: 50px;
+
+  .logo {
+    min-width: 145px;
+    max-width: 145px;
+    margin-right: 80px;
+
+    &__img {
+      width: 100%;
+    }
+  }
+
+  .menu {
+    &__list {
+      @include flex(flex-start);
+      flex-wrap: wrap;
+      font-size: 1.375rem;
+      font-weight: 350;
+    }
+
+    &__item {
+      margin-right: 80px;
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .contacts {
+    flex-shrink: 0;
+
+    &__tel {
+      font-size: 1.375rem;
+      font-weight: bold;
+    }
+  }
+}

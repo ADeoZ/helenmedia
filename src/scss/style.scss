@@ -1,7 +1,8 @@
-$font-size: 1rem;
-$font-color: blue;
+@import "reset";
+@import "mixins";
+@import "fonts";
+@import "main";
 
-h1 {
-    font-size: $font-size;
-    color: $font-color;
-}
+@import "header";
+@import "title";
+
