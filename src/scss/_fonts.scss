@@ -17,7 +17,7 @@
 		url('../fonts/Circe/Circe-Light.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/Circe/Circe-Light.woff') format('woff'),
 		url('../fonts/Circe/Circe-Light.ttf') format('truetype');
-	font-weight: 300;
+	font-weight: 350;
 	font-style: normal;
 }
 
@@ -48,7 +48,6 @@
 // mixins
 @mixin fontCirce() {
   font-family: 'Circe', Verdana, sans-serif;
-  font-weight: normal;
 }
 
 @mixin fontDela() {

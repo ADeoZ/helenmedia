@@ -11,33 +11,215 @@
 
 <body>
   <header class="header">
-    <div class="logo">
-      <img class="logo__img" src="../src/img/logo.png" alt="Helen Media">
-    </div>
-    <nav class="menu">
-      <ul class="menu__list">
-        <li class="menu__item"><a href="#">Услуги</a></li>
-        <li class="menu__item"><a href="#">Кейсы</a></li>
-        <li class="menu__item"><a href="#">О компании</a></li>
-        <li class="menu__item"><a href="#">Контакты</a></li>
-      </ul>
-    </nav>
-    <div class="contacts">
-      <a class="contacts__tel" href="tel:+74994550527">+7 (499) 455-05-27</a>
+    <div class="header__wrapper">
+      <div class="logo">
+        <img class="logo__img" src="../src/img/logo.png" alt="Helen Media">
+      </div>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item"><a href="#">Услуги</a></li>
+          <li class="menu__item"><a href="#">Кейсы</a></li>
+          <li class="menu__item"><a href="#">О компании</a></li>
+          <li class="menu__item"><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="contacts">
+        <a class="contacts__tel" href="tel:+74994550527">+7 (499) 455-05-27</a>
+      </div>
     </div>
   </header>
   <main class="main">
-    <section class="title">
-      <div class="title__wrapper">
-        <h1 class="slogan">
-          <span class="slogan__left">HELEN MEDIA — маркетинговое агентство,</span>
-          <span class="slogan__right">нацеленное</span>
-          <span class="slogan__center">на результат</span>
+
+    <section class="section title">
+      <div class="title__shorts title__shorts_1">[1] создаём комплексные<br>рекламные кампании</div>
+
+      <div class="slogan">
+        <h1 class="slogan__header">
+          <span class="slogan__header__left">HELEN MEDIA — маркетинговое агентство,</span>
+          <span class="slogan__header__right">нацеленное</span>
+          <span class="slogan__header__center">на результат</span>
         </h1>
-        <button class="order">Заказать</button>
       </div>
-      
+      <div class="title__controls">
+        <div class="title__shorts title__shorts_2">[2] или подбираем<br>точечное решение</div>
+        <button class="button button_order">Заказать</button>
+      </div>
+
+      <div class="circle title__circle_1"></div>
+      <div class="circle title__circle_2"></div>
+      <div class="circle title__circle_phone"></div>
     </section>
+
+    <section class="section about">
+      <div class="about__wrapper">
+        <h2 class="about__header">helen — это</h2>
+        <div class="about__arrow">
+          <svg width="54" height="54">
+            <use xlink:href="./img/sprites.svg#arrow"></use>
+          </svg>
+        </div>
+        <p class="text">Это больше, чем просто реклама для вашего бизнеса. Наш колоссальный опыт работы в сумме с
+          актуальным свежим дизайном и пониманием всех процессов производства не оставит вам шанса остаться в точке А.
+        </p>
+      </div>
+      <ul class="badges">
+        <li class="badges__item"><span class="badges__int">28</span>лет экспертизы</li>
+        <li class="badges__item"><span class="badges__int">700+</span>довольных клиентов</li>
+        <li class="badges__item"><span class="badges__int">3000+</span>успешных проектов</li>
+      </ul>
+      <div class="circle about__circle"></div>
+    </section>
+
+    <section class="section how">
+      <h2 class="how__header">Как мы работаем?</h2>
+      <p class="text how__text">Вся наша работа делится на 5 этапов, на каждом из которых мы готовы полностью помочь в
+        решении ваших вопросов.</p>
+      <div class="scheme">
+        <ol class="scheme__list">
+          <li class="scheme__item">
+            <div class="scheme__item__wrapper">
+              <div class="scheme__item__icon scheme__item__icon_arrow">
+                <svg>
+                  <use xlink:href="./img/sprites.svg#arrow"></use>
+                </svg>
+              </div>
+              <p class="text scheme__text">первичная консультация для определения ключевых задач</p>
+            </div>
+          </li>
+          <li class="scheme__item">
+            <div class="scheme__item__wrapper">
+              <div class="scheme__item__icon scheme__item__icon_cross">
+                <svg>
+                  <use xlink:href="./img/sprites.svg#cross"></use>
+                </svg>
+              </div>
+              <p class="text scheme__text">разработка медиаплана исходя из бизнес логики</p>
+            </div>
+          </li>
+          <li class="scheme__item">
+            <div class="scheme__item__wrapper">
+              <div class="scheme__item__icon scheme__item__icon_plus">
+                <svg>
+                  <use xlink:href="./img/sprites.svg#plus"></use>
+                </svg>
+              </div>
+              <p class="text scheme__text">защита медиаплана перед клиентом проектным-менеджером и подготовка КП
+              </p>
+            </div>
+          </li>
+          <li class="scheme__item">
+            <div class="scheme__item__wrapper">
+              <div class="scheme__item__icon scheme__item__icon_sun">
+                <svg>
+                  <use xlink:href="./img/sprites.svg#sun"></use>
+                </svg>
+              </div>
+              <p class="text scheme__text">при необходимости подключаем к презентации узкого специалиста по
+                конкретному инструменту</p>
+            </div>
+          </li>
+          <li class="scheme__item">
+            <div class="scheme__item__wrapper">
+              <div class="scheme__item__icon scheme__item__icon_square">
+                <svg>
+                  <use xlink:href="./img/sprites.svg#square"></use>
+                </svg>
+              </div>
+              <p class="text scheme__text">заключаем договор и начинаем работу</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <button class="button button_order how__button">Заказать</button>
+    </section>
+
+    <section class="section services">
+      <h2 class="services__header">Что делаем?</h2>
+      <ul class="services__list">
+        <li class="services__item services__item_internet">
+          <h3 class="services__item__header">Реклама<br>в интернете</h3>
+        </li>
+        <li class="services__item services__internet">
+          <ul class="services__internet__list">
+            <li class="services__internet__item"></li>
+            <li class="services__internet__item"><a href="" class="services__internet__link">Контекстная реклама и
+                аналитика</a></li>
+            <li class="services__internet__item"><a href="" class="services__internet__link">Медийная реклама</a></li>
+            <li class="services__internet__item"><a href="" class="services__internet__link">Разработка и поддержка
+                сайтов</a></li>
+            <li class="services__internet__item"><a href="" class="services__internet__link">SMM</a></li>
+            <li class="services__internet__item"><a href="" class="services__internet__link">SEO</a></li>
+          </ul>
+        </li>
+        <div class="services__item modal">
+          <div class="modal__wrapper">
+            <h3 class="modal__header">Контекстная реклама и веб-аналитика</h3>
+            <div class="modal__content">
+              <p class="modal__text">Один из самых эффективных и конкурентных инструментов для привлечения целевой
+                аудитории вашего бизнеса. Контекстная реклама — это текстовые или текстово-графические объявления,
+                которые показываются пользователю, когда он сам проявляет интерес к товару или услуге, указав свой
+                запрос в поисковых системах: «Яндекс», «Рамблер», Mail.ru.</p>
+              <p class="modal__text">Контекстная реклама позволяет максимально точно попасть в свою аудиторию и привлечь
+                покупателя.</p>
+              <p class="modal__text">Поскольку человек сам ищет информацию о товаре или услуге, с большой вероятностью
+                он нацелен именно на
+                покупку или заказ.</p>
+              <p class="modal__text">Однако из-за высокой конкуренции и необходимости грамотной настройки рекламных
+                кампаний — инструмент
+                считается сложным.</p>
+              <p class="modal__text">Наша команда сертифицированных специалистов проведёт аудит вашего проекта, и
+                предоставит медиаплан, в
+                котором прогнозирует результат рекламы.</p>
+              <p class="modal__text">Оставляйте заявку и <span class="bold">получите бесплатную</span> консультацию!</p>
+              </p>
+            </div>
+          </div>
+          <div class="modal__controls">
+            <button class="close"></button>
+            <button class="button button_order services__modal__button">Заказать</button>
+          </div>
+        </div>
+        <li class="services__item services__item_empty">
+          <div class="services__circle"></div>
+        </li>
+        <li class="services__item">
+          <div class="services__item__wrapper">
+            <h3 class="services__item__header">Реклама<br>на радио и ТВ</h3>
+            <a href="" class="services__link">подробнее</a>
+          </div>
+          <button class="button button_order">Заказать</button>
+        </li>
+        <li class="services__item services__item_polygraphy">
+          <div class="services__item__wrapper">
+            <h3 class="services__item__header">Полиграфия</h3>
+            <a href="" class="services__link">подробнее</a>
+          </div>
+          <button class="button button_order">Заказать</button>
+        </li>
+        <li class="services__item services__item_souvenirs">
+          <div class="services__item__wrapper">
+            <h3 class="services__item__header">Сувенирка</h3>
+            <a href="" class="services__link">подробнее</a>
+          </div>
+          <button class="button button_order">Заказать</button>
+        </li>
+        <li class="services__item services__item_design">
+          <div class="services__item__wrapper">
+            <h3 class="services__item__header">Дизайн</h3>
+            <a href="" class="services__link">подробнее</a>
+          </div>
+          <button class="button button_order">Заказать</button>
+        </li>
+        <li class="services__item services__item_outdoor">
+          <div class="services__item__wrapper">
+            <h3 class="services__item__header">Наружная реклама</h3>
+            <a href="" class="services__link">подробнее</a>
+          </div>
+          <button class="button button_order">Заказать</button>
+        </li>
+      </ul>
+    </section>
+
   </main>
 </body>
 

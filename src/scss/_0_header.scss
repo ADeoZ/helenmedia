@@ -1,14 +1,17 @@
 .header {
-  max-width: $maxwidth;
-  @include mc;
-  @include flex(space-between);
+  padding: 0 40px;
 
-  margin-top: 50px;
+  &__wrapper {
+    max-width: $maxwidth;
+    @include flex(space-between);
+    @include mc;
+    margin-top: 50px;
+  }
 
   .logo {
     min-width: 145px;
     max-width: 145px;
-    margin-right: 80px;
+    margin-right: 6%;
 
     &__img {
       width: 100%;
@@ -16,15 +19,17 @@
   }
 
   .menu {
+    width: 100%;
+
     &__list {
-      @include flex(flex-start);
-      flex-wrap: wrap;
+      @include flex(space-evenly);
+      flex-wrap: nowrap;
       font-size: 1.375rem;
       font-weight: 350;
     }
 
     &__item {
-      margin-right: 80px;
+      white-space: nowrap;
 
       a:hover {
         text-decoration: underline;
@@ -34,6 +39,7 @@
 
   .contacts {
     flex-shrink: 0;
+    margin-left: 6%;
 
     &__tel {
       font-size: 1.375rem;

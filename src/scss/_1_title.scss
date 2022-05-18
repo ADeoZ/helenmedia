@@ -1,0 +1,101 @@
+.title {
+  @include flex(center, flex-end);
+  flex-direction: column;
+  margin-top: 180px;
+  position: relative;
+
+  &__controls {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    @include flex;
+  }
+
+  &__shorts {
+    font-size: 1.375rem;
+    font-weight: 350;
+    line-height: 26px;
+  }
+
+  &__shorts_1 {
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+  }
+
+  &__shorts_2 {
+    position: absolute;
+    right: 70%;
+  }
+
+  .slogan {
+    position: relative;
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      max-width: 1000px;
+      margin-bottom: 70px;
+
+      font-size: 4rem;
+      text-transform: uppercase;
+      text-decoration: underline;
+
+      &__left,
+      &__right,
+      &__center {
+        display: inline-block;
+      }
+
+      &__right {
+        align-self: flex-end;
+      }
+
+      &__center {
+        align-self: center;
+      }
+    }
+  }
+
+  &__circle {
+    &_1 {
+      position: absolute;
+      top: 40px;
+      right: 45px;
+    }
+
+    &_2 {
+      position: absolute;
+      top: 45px;
+      left: -120px;
+    }
+
+    &_phone {
+      margin: 10px 110px 0;
+      background-color: black;
+      background: url("../img/phone.png") center center no-repeat;
+      cursor: pointer;
+
+      &:hover {
+        animation: spin 2s ease-in-out infinite;
+      }
+
+      @-moz-keyframes spin {
+        100% {
+          -moz-transform: rotate(360deg);
+        }
+      }
+      @-webkit-keyframes spin {
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+      @keyframes spin {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}

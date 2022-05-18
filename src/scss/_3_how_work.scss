@@ -1,0 +1,118 @@
+.how {
+  &__header {
+    max-width: 540px;
+    margin-bottom: 30px;
+    font-size: 4rem;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    max-width: 320px;
+  }
+
+  &__button {
+    @include mc;
+  }
+
+  .scheme {
+    height: 715px;
+    margin-bottom: 55px;
+    position: relative;
+    background: url("../img/line-how.svg") center center no-repeat;
+
+    &__list {
+      list-style-type: none;
+      counter-reset: num;
+    }
+
+    &__item {
+      position: absolute;
+      @include flex(center, flex-end);
+      width: 422px;
+      height: 208px;
+      padding: 0 45px;
+      border: 1px solid $black;
+      border-radius: 108px;
+      background-color: $creamy;
+
+      &:nth-child(1) {
+        left: -45px;
+        top: 173px;
+      }
+
+      &:nth-child(2) {
+        top: 0;
+        left: calc(50% - 422px / 2);
+      }
+
+      &:nth-child(3) {
+        right: -45px;
+        top: 170px;
+        background-color: $green;
+      }
+
+      &:nth-child(4) {
+        left: 0;
+        top: 500px;
+        padding-right: 15px;
+        border: transparent;
+        background-color: transparent;
+      }
+
+      &:nth-child(5) {
+        top: 507px;
+        left: 50%;
+      }
+
+      &__wrapper {
+        position: relative;
+        padding-bottom: 52px;
+      }
+
+      &__icon {
+        position: absolute;
+        bottom: 100%;
+
+        &_arrow {
+          width: 53px;
+          height: 53px;
+          transform: scaleY(-1);
+        }
+
+        &_cross {
+          width: 57px;
+          height: 57px;
+        }
+
+        &_plus {
+          width: 77px;
+          height: 77px;
+        }
+
+        &_sun {
+          width: 68px;
+          height: 68px;
+        }
+
+        &_square {
+          width: 57px;
+          height: 57px;
+        }
+      }
+    }
+
+    &__item::before {
+      content: counter(num);
+      counter-increment: num;
+      margin-right: 20px;
+      align-self: baseline;
+      @include fontDela;
+      font-size: 128px;
+    }
+
+    &__text {
+      margin-top: 14px;
+      text-align: unset;
+    }
+  }
+}
