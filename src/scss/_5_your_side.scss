@@ -1,0 +1,74 @@
+.your-side {
+  max-width: 100%;
+  margin-top: 160px;
+  background: url("../img/line-your-side.svg") center top no-repeat;
+
+  &__wrapper {
+    max-width: 880px;
+    @include mc;
+  }
+
+  &__header {
+    font-size: 4rem;
+    text-transform: uppercase;
+  }
+
+  &__circles {
+    display: inline-block;
+
+    &::before, &::after {
+      margin: 0 25px;
+    }
+
+    &::before {
+      content: "(";
+    }
+
+    &::after {
+      content: ")";
+    }
+  }
+
+  &__circle_1, &__circle_2 {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+  &__circle_1 {
+    background-color: $pink;
+  }
+
+  &__circle_2{
+    background-color: $salmon;
+    margin-left: -30px;
+  }
+
+  &__content {
+    @include flex;
+    margin-top: 40px;    
+  }
+
+  &__text {
+    flex-basis: 50%;
+
+    p {
+      margin-bottom: 20px;
+      font-size: 1.125rem;
+      font-weight: 350;
+      line-height: 1.375rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__controls {
+    flex-basis: 50%;
+    @include flex;
+  }
+
+  &__button {
+    @include button(black, $salmon);
+  }
+}

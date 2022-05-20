@@ -7,7 +7,7 @@
     font-size: 4rem;
     text-transform: uppercase;
   }
-  
+
   &__list {
     display: grid;
     grid-template-columns: repeat($column, 1fr);
@@ -86,10 +86,14 @@
       font-size: 1.125rem;
       text-transform: uppercase;
       position: relative;
+      transition: background-color 0.2s ease-out;
 
       &::after {
-        @include pseudo("🡥");
+        @include pseudo("");
         right: 20px;
+        width: 11px;
+        height: 11px;
+        background: $arrow-black center no-repeat;
         font-size: 1.125rem;
       }
 
@@ -112,30 +116,185 @@
     outline: 1px solid $black;
     border-radius: 50%;
   }
-  
+
   .modal {
-    display: grid;
-    grid-template-columns: repeat($column, 1fr);    
+    display: none;
+    // display: grid;
+    grid-template-columns: repeat($column, 1fr);
     height: auto;
     min-height: $rowHeight;
     grid-column: 1 / 4;
     padding: 0;
     background-color: $salmon;
 
+    &_radio {
+      background-color: $pink;
+    }
+
+    &_souvenirs {
+      background-color: $blue;
+    }
+
+    &_design {
+      background-color: $green;
+    }
+
+    &_outdoor {
+      background-color: $darkcreamy;
+    }
+
     &__wrapper {
       height: 100%;
       grid-column: 1 / 3;
-      padding: 15px 28px 28px;
       border-right: 1px solid $black;
+      background-image: linear-gradient($black, $black), linear-gradient($black, $black);
+      background-repeat: repeat-x;
+      background-position: 0 73px, 0 146px;
+      background-size: 100% 1px;
     }
 
     &__header {
+      min-height: 146px;
+      padding: 0 28px;
       font-size: 2.25rem;
+      line-height: 4.5rem;
       text-transform: uppercase;
+
+      &_context {
+        padding-right: 10%;
+        background: url("../img/services-modal-context.png") no-repeat;
+        background-position: 95% 0%;
+      }
+
+      &_media {
+        padding-right: 40%;
+        background: url("../img/services-modal-media.png") no-repeat;
+        background-position: 65% 30%;
+      }
+
+      &_sites {
+        padding-right: 20%;
+        background: url("../img/services-modal-sites.png") no-repeat;
+        background-position: 95% 36%;
+      }
+
+      &_smm {
+        padding-right: 40%;
+        background: url("../img/services-modal-smm.png") no-repeat;
+        background-position: 60% 10%;
+      }
+
+      &_seo {
+        padding-right: 50%;
+        background: url("../img/services-modal-seo.png") no-repeat;
+        background-position: 50% -70%;
+      }
+
+      &_radio {
+        padding-right: 40%;
+        background: url("../img/services-modal-radio.png") no-repeat;
+        background-position: 80% 45px;
+      }
+
+      &_polygraphy {
+        padding-right: 25%;
+        background: url("../img/services-modal-polygraphy.png") no-repeat;
+        background-position: 80% 10%;
+      }
+
+      &_souvenirs {
+        padding-right: 30%;
+        background: url("../img/services-modal-souvenirs.png") no-repeat;
+        background-position: 70% 25%;
+      }
+
+      &_design {
+        padding-right: 40%;
+        background: url("../img/services-modal-design.png") no-repeat;
+        background-position: 50% 25px;
+      }
+
+      &_outdoor {
+        padding-right: 40%;
+        background: url("../img/services-modal-outdoor.png") no-repeat;
+        background-position: 75% 15%;
+      }
     }
 
-    &__text {
-      font-size: 1.125rem;
+    &__content {
+      padding: 0 28px 28px;
+      margin-top: 30px;
+      column-count: 2;
+      column-gap: 45px;
+
+      p {
+        margin-bottom: 20px;
+        font-size: 1.125rem;
+        font-weight: 350;
+        line-height: 1.3rem;
+        text-align: justify;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__controls {
+      @include flex;
+      height: 100%;
+      position: relative;
+
+      .close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+        border: 1px solid $black;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.2s ease-out;
+
+        &:hover {
+          background-color: $black;
+        }
+
+        $size: 22px;
+
+        &__cross {
+          @include flex;
+          width: 100%;
+          height: 100%;
+          position: relative;
+
+          &:before,
+          &:after {
+            position: absolute;
+            content: '';
+            height: $size;
+            width: 1px;
+            background-color: $black;
+          }
+
+          &:before {
+            transform: rotate(45deg);
+          }
+
+          &:after {
+            transform: rotate(-45deg);
+          }
+
+          &:hover:before,
+          &:hover:after {
+            background-color: $white;
+          }
+        }
+      }
+
+      .services__modal__button {
+        @include button(black, transparent);
+      }
     }
   }
 }

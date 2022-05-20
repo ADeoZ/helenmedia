@@ -29,6 +29,7 @@ $breakpoints: (
   "desktop": 1248px,
   "desktop-wide": 1440px
 );
+
 @mixin mq($width, $type: min) {
   @if map_has_key($breakpoints, $width) {
     $width: map_get($breakpoints, $width);
@@ -39,6 +40,34 @@ $breakpoints: (
 
     @media only screen and (#{$type}-width: $width) {
       @content;
+    }
+  }
+}
+
+// change button colors
+@mixin button($color: 'white', $background: $blacky) {
+  background-color: $background;
+  color: $white;
+
+  &:hover {
+    background-color: $salmon;
+    color: $black;
+  }
+
+  &:after {
+    background-image: $arrow-white;
+  }
+
+  @if $color ==black {
+    color: $black;
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+
+    &:after {
+      background-image: $arrow-black;
     }
   }
 }
