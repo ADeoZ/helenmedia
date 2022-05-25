@@ -1,5 +1,7 @@
 // js
 import './js/app';
+import './js/swiper';
+import './js/yandexMap';
 
 // html
 import './index.html';
@@ -8,4 +10,3 @@ import './index.html';
 import './scss/style.scss';
 
 // images
-import './img/logo.png';

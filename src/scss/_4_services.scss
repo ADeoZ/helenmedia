@@ -2,12 +2,6 @@
   $rowHeight: 433px;
   $column: 3;
 
-  &__header {
-    margin-bottom: 90px;
-    font-size: 4rem;
-    text-transform: uppercase;
-  }
-
   &__list {
     display: grid;
     grid-template-columns: repeat($column, 1fr);
@@ -22,9 +16,10 @@
     padding: 28px;
     border-right: 1px solid $black;
     border-bottom: 1px solid $black;
+    overflow: hidden;
 
     &_internet {
-      grid-column: 1 / 3;
+      grid-column: 1 / #{$column};
       background: url("../img/services-internet.png"), url("../img/line-services-internet.svg");
       background-position: center, center;
       background-repeat: no-repeat;
@@ -109,21 +104,13 @@
     text-decoration-line: underline;
   }
 
-  &__circle {
-    width: 100%;
-    margin: auto;
-    padding-bottom: 100%;
-    outline: 1px solid $black;
-    border-radius: 50%;
-  }
-
   .modal {
     display: none;
     // display: grid;
     grid-template-columns: repeat($column, 1fr);
     height: auto;
     min-height: $rowHeight;
-    grid-column: 1 / 4;
+    grid-column: span $column;
     padding: 0;
     background-color: $salmon;
 
@@ -229,10 +216,6 @@
 
       p {
         margin-bottom: 20px;
-        font-size: 1.125rem;
-        font-weight: 350;
-        line-height: 1.3rem;
-        text-align: justify;
 
         &:last-child {
           margin-bottom: 0;
@@ -271,7 +254,7 @@
           &:before,
           &:after {
             position: absolute;
-            content: '';
+            content: "";
             height: $size;
             width: 1px;
             background-color: $black;

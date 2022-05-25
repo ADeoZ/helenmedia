@@ -1,0 +1,73 @@
+.footer {
+  margin-top: 100px;
+  padding: 0 40px;
+  background-color: $blue;
+
+  &__wrapper {
+    @include flex(space-between, stretch);
+    max-width: $maxwidth;
+    @include mc;
+    padding: 80px 0 120px;
+  }
+
+  &__header {
+    font-weight: 700;
+    color: $white;
+    text-transform: uppercase;
+
+    &_contacts {
+      line-height: 2.7rem;
+      margin-bottom: 14px;
+    }
+  }
+
+  .logo {
+    @include flex(space-between, flex-start);
+    flex-direction: column;
+
+    &__button {
+      margin: 30px 0 10px;
+      @include button(black, $salmon);
+    }
+  }
+
+  .menu {
+    font-size: 1.125rem;
+    line-height: 2.7rem;
+
+    &__item {
+      font-weight: 350;
+
+      a {
+        color: $white;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__contacts {
+    font-size: 1.125rem;
+    font-weight: 350;
+    line-height: 1.25rem;
+    color: $white;
+
+    a {
+      font-weight: 700;
+      color: $white;
+      line-height: 1.5rem;
+    }
+  }
+
+  &__tel {
+    a {
+      color: $yellow;
+    }
+  }
+
+  &__address {
+    margin-top: 45px;
+  }
+}

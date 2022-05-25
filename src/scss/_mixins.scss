@@ -6,7 +6,7 @@
 }
 
 // base ::after и ::before
-@mixin pseudo($content: '', $display: block, $pos: absolute) {
+@mixin pseudo($content: "", $display: block, $pos: absolute) {
   content: $content;
   display: $display;
   position: $pos;
@@ -27,7 +27,7 @@ $breakpoints: (
   "tablet": 768px,
   "tablet-wide": 1024px,
   "desktop": 1248px,
-  "desktop-wide": 1440px
+  "desktop-wide": 1440px,
 );
 
 @mixin mq($width, $type: min) {
@@ -45,7 +45,7 @@ $breakpoints: (
 }
 
 // change button colors
-@mixin button($color: 'white', $background: $blacky) {
+@mixin button($color: "white", $background: $blacky) {
   background-color: $background;
   color: $white;
 

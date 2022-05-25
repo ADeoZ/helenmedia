@@ -1,0 +1,104 @@
+.start {
+  @include flex;
+  flex-direction: column;
+  max-width: 100%;
+  padding: 0;
+  position: relative;
+
+  &__header {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    max-width: 770px;
+    margin-bottom: 50px;
+    column-count: 2;
+    column-gap: 45px;
+
+    p {
+      break-inside: avoid;
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    top: -105px;
+    right: 18%;
+    background-color: $blue;
+  }
+
+  $itemWidth: 770px;
+  $itemHeight: 360px;
+  .scroller {
+    width: 100%;
+    overflow: hidden;
+
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      display: flex;
+      flex-shrink: 0;
+      width: $itemWidth;
+      height: $itemHeight;
+      padding: 20px 60px 60px;
+      border: 1px solid $black;
+      overflow: hidden;
+      position: relative;
+    }
+
+    &__content {
+      @include flex(flex-end, normal);
+      flex-direction: column;
+      width: 50%;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+      font-size: 2.25rem;
+      text-transform: uppercase;
+    }
+
+    &__text {
+      padding-right: 100px;
+    }
+
+    &__image {
+      @include flex;
+      width: 50%;
+
+      img {
+        object-fit: contain;
+      }
+    }
+
+    &__button {
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+    }
+
+    &__controls {
+      max-width: $itemWidth;
+      margin-top: 20px;
+      @include mc;
+
+      &__next {
+        margin-left: 125px;
+        font-size: 1.125rem;
+        font-weight: 350;
+        line-height: 26px;
+        position: relative;
+
+        &::before {
+          @include pseudo;
+          width: 103px;
+          height: 26px;
+          left: -125px;
+          background: url("../img/scroller-next.svg") center no-repeat;
+        }
+      }
+    }
+  }
+}

@@ -37,13 +37,13 @@
     }
   }
 
-  .contacts {
+  &__contacts {
     flex-shrink: 0;
     margin-left: 6%;
+  }
 
-    &__tel {
-      font-size: 1.375rem;
-      font-weight: bold;
-    }
+  &__tel {
+    font-size: 1.375rem;
+    font-weight: bold;
   }
 }

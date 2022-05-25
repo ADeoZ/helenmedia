@@ -6,10 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=d57024f2-81f0-4c06-9393-f5fc68e4b9c8&lang=ru_RU"
+    type="text/javascript"></script>
+
   <title>Helen Media</title>
 </head>
 
 <body>
+
   <header class="header">
     <div class="header__wrapper">
       <div class="logo">
@@ -17,24 +21,25 @@
       </div>
       <nav class="menu">
         <ul class="menu__list">
-          <li class="menu__item"><a href="#">Услуги</a></li>
-          <li class="menu__item"><a href="#">Кейсы</a></li>
-          <li class="menu__item"><a href="#">О компании</a></li>
-          <li class="menu__item"><a href="#">Контакты</a></li>
+          <li class="menu__item"><a href="#services">Услуги</a></li>
+          <li class="menu__item"><a href="#portfolio">Кейсы</a></li>
+          <li class="menu__item"><a href="#about">О компании</a></li>
+          <li class="menu__item"><a href="#contacts">Контакты</a></li>
         </ul>
       </nav>
-      <div class="contacts">
-        <a class="contacts__tel" href="tel:+74994550527">+7 (499) 455-05-27</a>
+      <div class="header__contacts">
+        <a class="header__tel" href="tel:+74994550527">+7 (499) 455-05-27</a>
       </div>
     </div>
   </header>
+
   <main class="main">
 
     <section class="section title">
       <div class="title__shorts title__shorts_1">[1] создаём комплексные<br>рекламные кампании</div>
 
       <div class="slogan">
-        <h1 class="slogan__header">
+        <h1 class="h_header slogan__header">
           <span class="slogan__header__left">HELEN MEDIA — маркетинговое агентство,</span>
           <span class="slogan__header__right">нацеленное</span>
           <span class="slogan__header__center">на результат</span>
@@ -50,7 +55,7 @@
       <div class="circle title__circle_phone"></div>
     </section>
 
-    <section class="section about">
+    <section class="section about" id="about">
       <div class="about__wrapper">
         <h2 class="about__header">helen — это</h2>
         <div class="about__arrow">
@@ -71,7 +76,7 @@
     </section>
 
     <section class="section how">
-      <h2 class="how__header">Как мы работаем?</h2>
+      <h2 class="h_header how__header">Как мы работаем?</h2>
       <p class="text how__text">Вся наша работа делится на 5 этапов, на каждом из которых мы готовы полностью помочь в
         решении ваших вопросов.</p>
       <div class="scheme">
@@ -133,8 +138,8 @@
       <button class="button button_order how__button">Заказать</button>
     </section>
 
-    <section class="section services">
-      <h2 class="services__header">Что делаем?</h2>
+    <section class="section services" id="services">
+      <h2 class="h_header services__header">Что делаем?</h2>
       <ul class="services__list">
         <li class="services__item services__item_internet">
           <h3 class="services__item__header">Реклама<br>в интернете</h3>
@@ -154,7 +159,7 @@
         <div class="services__item modal modal_context">
           <div class="modal__wrapper">
             <h3 class="modal__header modal__header_context">Контекстная реклама и веб-аналитика</h3>
-            <div class="modal__content">
+            <div class="text modal__content">
               <p>Один из самых <span class="bold">эффективных</span> и конкурентных инструментов для
                 привлечения целевой
                 аудитории вашего бизнеса. Контекстная реклама — это текстовые или текстово-графические объявления,
@@ -184,7 +189,7 @@
         <div class="services__item modal modal_media">
           <div class="modal__wrapper">
             <h3 class="modal__header modal__header_media">Медийная реклама</h3>
-            <div class="modal__content">
+            <div class="text modal__content">
               <p>В основном направлена на повышение узнаваемости вашего бренда. Как правило, мы рекомендуем использовать
                 данный инструмент тем клиентам, кто уже активно продвигается с помощью контекстной рекламы и SEO. Но
                 медийная реклама также будет эффективна для вывода на рынок нового или уникального продукта.</p>
@@ -204,7 +209,7 @@
         <div class="services__item modal modal_sites">
           <div class="modal__wrapper">
             <h3 class="modal__header modal__header_sites">Разработка и поддержка сайтов</h3>
-            <div class="modal__content">
+            <div class="text modal__content">
               <p>Мы предоставляем полный набор услуг от разработки дизайн-макетов и вёрстки сайта, до подключения
                 домена, хостинга, настройки счётчиков веб-аналитики, подключения сервисов онлайн-чатов и обратных
                 звонков.</p>
@@ -223,7 +228,7 @@
         <div class="services__item modal modal_smm">
           <div class="modal__wrapper">
             <h3 class="modal__header modal__header_smm">SMM</h3>
-            <div class="modal__content">
+            <div class="text modal__content">
               <p>За последнее время рынок социальных сетей изменился, и на смену запрещённым в РФ площадкам пришли
                 новые: VK, Telegram, Дзен и не только. Наша команда ежедневно следит за новыми функциями и
                 инструментами, и старается предложить самые актуальные механики продвижения для вашего бизнеса.</p>
@@ -242,7 +247,7 @@
         <div class="services__item modal modal_seo">
           <div class="modal__wrapper">
             <h3 class="modal__header modal__header_seo">SEO</h3>
-            <div class="modal__content">
+            <div class="text modal__content">
               <p>SEO — это так называемое «органическое» продвижение в поисковых системах «Яндекс», Google, «Рамблер»,
                 Mail.ru. В отличие от контекстной рекламы, тут вы не платите за показ ваших объявлений в поисковой
                 выдачи. Поисковики сами определяют, на сколько ваш сайт удовлетворяет запросу потенциального клиента, и
@@ -262,7 +267,7 @@
           </div>
         </div>
         <li class="services__item services__item_empty">
-          <div class="services__circle"></div>
+          <div class="circle-expandable"></div>
         </li>
         <li class="services__item">
           <div class="services__item__wrapper">
@@ -281,7 +286,7 @@
         <div class="services__item modal modal_radio">
           <div class="modal__wrapper">
             <h3 class="modal__header modal__header_radio">Реклама<br>на радио и тв</h3>
-            <div class="modal__content">
+            <div class="text modal__content">
               <p>Компания helen долгие годы сотрудничает с ведущими продакшенами на рынке ТВ рекламы и радиостанциями.
               </p>
               <p>По вашему запросу мы проведём анализ рынка и конкурентов для выявления целевой аудитории и разработки
@@ -301,7 +306,7 @@
         <div class="services__item modal modal_polygraphy">
           <div class="modal__wrapper">
             <h3 class="modal__header modal__header_polygraphy">Полиграфия</h3>
-            <div class="modal__content">
+            <div class="text modal__content">
               <p>Делаем полный цикл полиграфической продукции. Собственное производство и служба логистики, а также
                 широкая база подрядчиков – позволяют предложить вам высокое качество, оптимальную цену и сроки получения
                 готовой продукции. Скидки на большие тиражи, профессиональный дизайн и услуги по допечатной подготовке,
@@ -341,7 +346,7 @@
         <div class="services__item modal modal_souvenirs">
           <div class="modal__wrapper">
             <h3 class="modal__header modal__header_souvenirs">Сувенирка</h3>
-            <div class="modal__content">
+            <div class="text modal__content">
               <p>Сувенирная продукция, корпоративные подарки, мерч – мы закрываем полный цикл задач от разработки
                 дизайн-концепции до производства и доставки в ваш офис готовой продукции. Работаем с топ-10 поставщиков
                 сувенирного рынка.</p>
@@ -360,11 +365,14 @@
         <div class="services__item modal modal_design">
           <div class="modal__wrapper">
             <h3 class="modal__header modal__header_design">Дизайн</h3>
-            <div class="modal__content">
+            <div class="text modal__content">
               <p>Дизайн – это язык, на котором мы общаемся без слов.
                 Разрабатываем логотипы и фирменный стиль компаний с нуля, или дорабатываем то, что уже есть. Проведём
                 ребрендинг, или создадим ваш новый уникальный бренд.
-                Делаем дизайн для разных бизнес задач: от открытия новой точки.</p>
+                Делаем дизайн для разных бизнес задач: от открытия новой точки продаж до международных конференций. У
+                нас есть несколько готовых пакетных предложений, а также прайс на конкретные услуги.
+                Хотите обсудить ваш проект?
+                Оставляйте заявку!</p>
             </div>
           </div>
           <div class="modal__controls">
@@ -377,7 +385,7 @@
         <div class="services__item modal modal_outdoor">
           <div class="modal__wrapper">
             <h3 class="modal__header modal__header_outdoor">Наружная реклама</h3>
-            <div class="modal__content">
+            <div class="text modal__content">
               <p>Объёмные буквы, навигационные указатели, светодиодные вывески, крышные установки, монтаж и ремонт,
                 широкоформатная и интерьерная печать, фрезерная резка – да, мы всё это делаем! И не только.</p>
               <p>Согласовываем наружную рекламу по постановлению №902-ПП правительства г. Москвы. Гарантированное и
@@ -396,12 +404,12 @@
 
     <section class="section your-side">
       <div class="your-side__wrapper">
-        <h2 class="your-side__header">Мы <span class="your-side__circles">
+        <h2 class="h_header your-side__header">Мы <span class="your-side__circles">
             <div class="circle your-side__circle_1"></div>
             <div class="circle your-side__circle_2"></div>
           </span> всегда на вашей стороне</h2>
         <div class="your-side__content">
-          <div class="your-side__text">
+          <div class="text your-side__text">
             <p>Мы никогда не навязываем услуги, которые вам не пригодятся. У нас нет стандартных пакетов, потому что к
               решению проблемы подходим индивидуально.</p>
             <p>Просто закажите обратный звонок. И мы попробуем подобрать самый подходящий для вас вариант.</p>
@@ -413,7 +421,166 @@
       </div>
     </section>
 
+    <section class="section portfolio" id="portfolio">
+      <h2 class="h_header portfolio__header">Уже сделали</h2>
+      <ul class="portfolio__list">
+        <li class="portfolio__item">
+          <div class="portfolio__title">Полиграфия</div>
+          <div class="portfolio__content">
+            <img src="./img/portfolio/polygraphy-1.png" alt="Полиграфия - Пример работы">
+          </div>
+        </li>
+        <li class="portfolio__item portfolio__item_colspan">
+          <div class="portfolio__title">Сувенирка</div>
+          <div class="portfolio__content">
+            <img src="./img/portfolio/souvenirs-1.png" alt="Сувенирка - Пример работы">
+            <button class="button button_order portfolio__button">Заказать</button>
+          </div>
+        </li>
+        <li class="portfolio__item portfolio__item_rowspan">
+          <div class="portfolio__title">Сувенирка</div>
+          <div class="portfolio__content">
+            <img src="./img/portfolio/souvenirs-2.png" alt="Сувенирка - Пример работы">
+          </div>
+        </li>
+        <li class="portfolio__item">
+          <div class="portfolio__title">Сувенирка</div>
+          <div class="portfolio__content">
+            <img src="./img/portfolio/souvenirs-3.png" alt="Сувенирка - Пример работы">
+          </div>
+        </li>
+        <li class="portfolio__item">
+          <div class="portfolio__title">SMM</div>
+          <div class="portfolio__content">
+            <div class="circle-expandable"></div>
+          </div>
+        </li>
+        <li class="portfolio__item">
+          <div class="portfolio__title">Digital</div>
+          <div class="portfolio__content">
+            <div class="circle-expandable"></div>
+          </div>
+        </li>
+        <li class="portfolio__item">
+          <div class="portfolio__title">Полиграфия</div>
+          <div class="portfolio__content">
+            <img style="width: auto; height: auto; transform: scale(1.5) rotate(-20.75deg);"
+              src="./img/services-modal-context.png" alt="Заглушка">
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section start">
+      <h2 class="h_header start__header">Начнём сейчас?</h2>
+      <div class="text start__text">
+        <p>Поскольку за нашими плечами огромный опыт работы с разными нишами и разными целевыми запросами, мы хотели бы
+          познакомить вас с некоторыми пакетными предложениями, которые наиболее часто у нас заказывают.</p>
+        <p>Возможно они вдохновят вас на идею развития! Если же у вас возникнут сомнения, просто закажите обратный
+          звонок и мы предложим индивидуальнй пакет услуг.</p>
+      </div>
+      <div class="circle start__circle"></div>
+      <div class="scroller">
+        <ul class="scroller__list">
+          <li class="scroller__item">
+            <div class="scroller__content">
+              <h3 class="scroller__title">Надёжный SEO</h3>
+              <div class="text scroller__text">
+                <p>Прокачаем ваш SEO через свои самые сильные и надёжные инструменты.</p>
+              </div>
+            </div>
+            <div class="scroller__image"><img src="./img/scroller/seo.png" alt="SEO"></div>
+            <button class="button button_order scroller__button">Заказать</button>
+          </li>
+          <li class="scroller__item">
+            <div class="scroller__content">
+              <h3 class="scroller__title">My Target</h3>
+              <div class="text scroller__text">
+                <p>Таргетированная реклама в сервисах ВКонтакте с любым бюджетом, даже самым маленьким.</p>
+              </div>
+            </div>
+            <div class="scroller__image"><img src="./img/scroller/mytarget.png" alt="My Target"></div>
+            <button class="button button_order scroller__button">Заказать</button>
+          </li>
+          <li class="scroller__item">
+            <div class="scroller__content">
+              <h3 class="scroller__title">Вверх по соцсетям</h3>
+              <div class="text scroller__text">
+                <p>Самые сильные инструменты для быстрого развития ваших соцсетей.</p>
+              </div>
+            </div>
+            <div class="scroller__image"><img src="./img/scroller/social.png" alt="Социальные сети"></div>
+            <button class="button button_order scroller__button">Заказать</button>
+          </li>
+        </ul>
+        <div class="scroller__controls">
+          <button class="scroller__controls__next">пролистать</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contacts" id="contacts">
+      <div class="contacts__wrapper">
+        <h2 class="h_header contacts__header">Контакты</h2>
+        <div class="contacts__arrow">
+          <svg width="54" height="54">
+            <use xlink:href="./img/sprites.svg#arrow"></use>
+          </svg>
+        </div>
+        <div class="contacts__content">
+          <div class="text contacts__address">
+            <address class="address">
+              <span class="address__field">Телефон:</span>
+              <span class="address__value"><a href="tel:+74994550523">+7 (499) 455-05-23</a></span>
+            </address>
+            <address class="address">
+              <span class="address__field">Email:</span>
+              <span class="address__value"><a href="mailto:reklama3@elenara.ru">reklama3@elenara.ru</a></span>
+            </address>
+            <address class="address">
+              <span class="address__field">Адрес:</span>
+              <span class="address__value">ул. Русаковская 13/5, БЦ Бородино</span>
+            </address>
+            <address class="address">
+              <span class="address__field">Производство:</span>
+              <span class="address__value">Северянинский проезд 14, с.2</span>
+            </address>
+          </div>
+          <div class="contacts__controls">
+            <button class="button button_order contacts__button">Консультация</button>
+          </div>
+          <div class="circle contacts__circle"></div>
+        </div>
+        <div class="contacts__map">
+          <div id="yandex-map"></div>
+        </div>
+      </div>
+    </section>
+
   </main>
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="logo">
+        <img src="./img/logo_footer.png" alt="Helen Media Agency">
+        <button class="button button_order logo__button">Заказать звонок</button>
+      </div>
+      <nav class="menu">
+        <div class="footer__header footer__header_menu">Меню</div>
+        <ul class="menu__list">
+          <li class="menu__item"><a href="#services">Услуги</a></li>
+          <li class="menu__item"><a href="#portfolio">Кейсы</a></li>
+          <li class="menu__item"><a href="#about">О компании</a></li>
+          <li class="menu__item"><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="footer__contacts">
+        <div class="footer__header footer__header_contacts">Контакты</div>
+        <address class="footer__tel"><a href="tel:+74995006790">+7 (499) 500-67-90</a></address>
+        <address class="footer__mail"><a href="mailto:helen@info.ru">helen@info.ru</a></address>
+        <address class="footer__address">Москва, БЦ Бородино<br>ул. Русаковская д.13,<br>офис 210</address>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

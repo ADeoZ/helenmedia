@@ -1,55 +1,56 @@
 // Circe
 @font-face {
-	font-family: 'Circe';
-	src: url('../fonts/Circe/Circe-Regular.eot');
-	src: local('Circe'), local('Circe-Regular'),
-		url('../fonts/Circe/Circe-Regular.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Circe/Circe-Regular.woff') format('woff'),
-		url('../fonts/Circe/Circe-Regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Circe";
+  src: url("../fonts/Circe/Circe-Regular.eot");
+  src: local("Circe"), local("Circe-Regular"),
+    url("../fonts/Circe/Circe-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Circe/Circe-Regular.woff") format("woff"),
+    url("../fonts/Circe/Circe-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: 'Circe';
-	src: url('../fonts/Circe/Circe-Light.eot');
-	src: local('Circe Light'), local('Circe-Light'),
-		url('../fonts/Circe/Circe-Light.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Circe/Circe-Light.woff') format('woff'),
-		url('../fonts/Circe/Circe-Light.ttf') format('truetype');
-	font-weight: 350;
-	font-style: normal;
+  font-family: "Circe";
+  src: url("../fonts/Circe/Circe-Light.eot");
+  src: local("Circe Light"), local("Circe-Light"),
+    url("../fonts/Circe/Circe-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Circe/Circe-Light.woff") format("woff"),
+    url("../fonts/Circe/Circe-Light.ttf") format("truetype");
+  font-weight: 350;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: 'Circe';
-	src: url('../fonts/Circe/Circe-Bold.eot');
-	src: local('Circe Bold'), local('Circe-Bold'),
-		url('../fonts/Circe/Circe-Bold.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Circe/Circe-Bold.woff') format('woff'),
-		url('../fonts/Circe/Circe-Bold.ttf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
+  font-family: "Circe";
+  src: url("../fonts/Circe/Circe-Bold.eot");
+  src: local("Circe Bold"), local("Circe-Bold"),
+    url("../fonts/Circe/Circe-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Circe/Circe-Bold.woff") format("woff"),
+    url("../fonts/Circe/Circe-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'Dela Gothic One';
+  font-family: "Dela Gothic One";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/DelaGothicOne/dela-gothic-one-v10-latin_cyrillic-regular.eot');
-  src: local(''),
-       url('../fonts/DelaGothicOne/dela-gothic-one-v10-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/DelaGothicOne/dela-gothic-one-v10-latin_cyrillic-regular.woff2') format('woff2'),
-       url('../fonts/DelaGothicOne/dela-gothic-one-v10-latin_cyrillic-regular.woff') format('woff'),
-       url('../fonts/DelaGothicOne/dela-gothic-one-v10-latin_cyrillic-regular.ttf') format('truetype'),
-       url('../fonts/DelaGothicOne/dela-gothic-one-v10-latin_cyrillic-regular.svg#DelaGothicOne') format('svg');
+  src: url("../fonts/DelaGothicOne/dela-gothic-one-v10-latin_cyrillic-regular.eot");
+  src: local(""),
+    url("../fonts/DelaGothicOne/dela-gothic-one-v10-latin_cyrillic-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DelaGothicOne/dela-gothic-one-v10-latin_cyrillic-regular.woff2") format("woff2"),
+    url("../fonts/DelaGothicOne/dela-gothic-one-v10-latin_cyrillic-regular.woff") format("woff"),
+    url("../fonts/DelaGothicOne/dela-gothic-one-v10-latin_cyrillic-regular.ttf") format("truetype"),
+    url("../fonts/DelaGothicOne/dela-gothic-one-v10-latin_cyrillic-regular.svg#DelaGothicOne") format("svg");
 }
 
 // mixins
 @mixin fontCirce() {
-  font-family: 'Circe', Verdana, sans-serif;
+  font-family: "Circe", Verdana, sans-serif;
 }
 
 @mixin fontDela() {
-  font-family: 'Dela Gothic One', "Arial Black", sans-serif;
+  font-family: "Dela Gothic One", "Arial Black", sans-serif;
 }

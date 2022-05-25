@@ -1,0 +1,63 @@
+.portfolio {
+  $rowHeight: 510px;
+  $titleHeight: 75px;
+  $column: 3;
+
+  margin-top: 180px;
+
+  &__header {
+    margin-bottom: 90px;
+    font-size: 4rem;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat($column, 1fr);
+    border-left: 1px solid $black;
+    border-top: 1px solid $black;
+  }
+
+  &__item {
+    height: $rowHeight;
+    border-right: 1px solid $black;
+    border-bottom: 1px solid $black;
+    overflow: hidden;
+    position: relative;
+
+    &_colspan {
+      grid-column: span 2;
+    }
+
+    &_rowspan {
+      height: $rowHeight * 2;
+      grid-row: span 2;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    @include flex(flex-start);
+    height: $titleHeight;
+    padding: 20px 30px;
+    border-bottom: 1px solid $black;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    @include flex;
+    height: calc(100% - $titleHeight);
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+  }
+}
