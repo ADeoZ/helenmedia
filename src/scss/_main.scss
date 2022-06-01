@@ -12,6 +12,8 @@ $green: #eeeac4;
 $blue: #655cd8;
 $darkcreamy: #efd4c5;
 $yellow: #ffdc73;
+$alpha-black: rgba(0, 0, 0, 0.5);
+$gray: #C4C4C4;
 
 //svg
 $arrow-black: url("data:image/svg+xml,%3Csvg%20width%3D%2211%22%20height%3D%2211%22%20viewBox%3D%220%200%2011%2011%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1.674%2010.154L9.306%202.522L9.756%209.146L10.746%208.156L10.314%200.739999L2.898%200.325999L1.908%201.316L8.55%201.766L0.918%209.398L1.674%2010.154Z%22%20fill%3D%22black%22%2F%3E%3C%2Fsvg%3E");
@@ -77,6 +79,7 @@ h3 {
   width: 220px;
   height: 50px;
   border: 1px solid $black;
+  @include fontCirce;
   font-size: 1.125rem;
   font-weight: 350;
   transition: background-color 0.2s ease-out;
@@ -91,6 +94,10 @@ h3 {
 
   &:hover::after {
     background: none;
+  }
+
+  &:focus {
+    outline: none;
   }
 
   &_order {

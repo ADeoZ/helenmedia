@@ -1,0 +1,30 @@
+.title__circle_2 {
+  animation: float 10s alternate-reverse infinite ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translate(-5px, -5px);
+  }
+  50% {
+    transform: translate(5px, -10px);
+  }
+  80% {
+    transform: translate(-10px, -15px);
+  }
+  100% {
+    transform: translate(10px, -20px);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
