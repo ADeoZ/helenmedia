@@ -35,7 +35,7 @@
     }
 
     &_souvenirs {
-      background: url("../img/services-souvenirs.png") center no-repeat;
+      background: url("../img/services-souvenirs.png") center no-repeat;      
     }
 
     &_design {
@@ -121,6 +121,11 @@
 
     &_souvenirs {
       background-color: $blue;
+      color: $white;
+
+      button.button_order {
+        @include button(black, $white);
+      }
     }
 
     &_design {

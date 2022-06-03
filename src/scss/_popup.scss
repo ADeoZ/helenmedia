@@ -89,14 +89,23 @@
         padding-left: 45px;
       }
     }
+  }
 
-    .form__error {
-      @include flex;
-      margin-top: 15px;
-      padding: 15px 20px;
-      background-color: $salmon;      
-      font-size: 1.125rem;
-    }
+  .form__error,
+  .form__success {
+    @include flex;
+    padding: 15px 20px;
+    font-size: 1.125rem;
+    text-align: center;
+  }
+
+  .form__error {
+    margin-top: 15px;
+    background-color: $salmon;
+  }
+
+  .form__success {
+    background-color: $green;
   }
 }
 

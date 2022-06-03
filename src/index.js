@@ -1,4 +1,6 @@
 // js
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import './js/app';
 import './js/swiper';
 import './js/yandexMap';

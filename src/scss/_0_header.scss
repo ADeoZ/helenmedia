@@ -1,6 +1,10 @@
 .header {
   padding: 0 40px;
 
+  @include mq('tablet-wide', 'max') {
+    display: none;
+  }
+
   &__wrapper {
     max-width: $maxwidth;
     @include flex(space-between);
