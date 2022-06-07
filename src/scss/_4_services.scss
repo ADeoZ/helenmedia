@@ -1,12 +1,15 @@
 .services {
   $rowHeight: 433px;
-  $column: 3;
 
   &__list {
     display: grid;
-    grid-template-columns: repeat($column, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     border-left: 1px solid $black;
     border-top: 1px solid $black;
+
+    @include media_undo("tablet-wide") {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__item {
@@ -19,11 +22,16 @@
     overflow: hidden;
 
     &_internet {
-      grid-column: 1 / #{$column};
+      grid-column: 1 / 3;
       background: url("../img/services-internet.png"), url("../img/line-services-internet.svg");
       background-position: center, center;
       background-repeat: no-repeat;
       background-size: auto, 100%;
+
+      @include media_undo("tablet-wide") {
+        grid-column: 1 / 2;
+        background-position: bottom, center;
+      }
     }
 
     &_empty {
@@ -107,13 +115,16 @@
   .modal {
     display: none;
     // display: grid;
-    grid-template-columns: repeat($column, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     height: auto;
-    // min-height: $rowHeight;
-    grid-column: span $column;
+    grid-column: span 3;
     padding: 0;
     background-color: $salmon;
     overflow: hidden;
+
+    @include media_undo("tablet-wide") {
+      grid-column: span 2;
+    }
 
     &_radio {
       background-color: $pink;
@@ -163,13 +174,13 @@
       &_media {
         padding-right: 40%;
         background: url("../img/services-modal-media.png") no-repeat;
-        background-position: 65% 30%;
+        background-position: 95% 30%;
       }
 
       &_sites {
         padding-right: 20%;
         background: url("../img/services-modal-sites.png") no-repeat;
-        background-position: 95% 36%;
+        background-position: 100% 36%;
       }
 
       &_smm {
@@ -205,13 +216,13 @@
       &_design {
         padding-right: 40%;
         background: url("../img/services-modal-design.png") no-repeat;
-        background-position: 50% 25px;
+        background-position: 60% 25px;
       }
 
       &_outdoor {
         padding-right: 40%;
         background: url("../img/services-modal-outdoor.png") no-repeat;
-        background-position: 75% 15%;
+        background-position: 80% 15%;
       }
     }
 

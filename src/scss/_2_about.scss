@@ -21,6 +21,7 @@
     margin-top: 60px;
 
     &__item {
+      flex-shrink: 0;
       height: 188px;
       margin-right: -30px;
       padding: 40px 60px;
@@ -30,6 +31,12 @@
       font-size: 1.125rem;
       font-weight: 350;
       white-space: nowrap;
+
+      @include media_undo("tablet-wide") {
+        margin-right: -35px;
+        padding-left: 45px;
+        padding-right: 45px;
+      }
 
       &:nth-child(1) {
         width: 188px;

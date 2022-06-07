@@ -33,6 +33,13 @@
       border-radius: 108px;
       background-color: $creamy;
 
+      @include media_undo("tablet-wide") {
+        width: 410px;
+        height: 200px;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+
       &:nth-child(1) {
         left: -45px;
         top: 173px;
@@ -41,12 +48,21 @@
       &:nth-child(2) {
         top: 0;
         left: calc(50% - 422px / 2);
+
+        @include media_undo("tablet-wide") {
+          left: auto;
+          right: 4%;
+        }
       }
 
       &:nth-child(3) {
         right: -45px;
         top: 170px;
         background-color: $green;
+
+        @include media_undo("tablet-wide") {
+          top: 270px;
+        }
       }
 
       &:nth-child(4) {
@@ -55,11 +71,20 @@
         padding-right: 15px;
         border: transparent;
         background-color: transparent;
+
+        @include media_undo("tablet-wide") {
+          left: -45px;
+          top: 480px;
+        }
       }
 
       &:nth-child(5) {
         top: 507px;
         left: 50%;
+
+        @include media_undo("tablet-wide") {
+          top: 530px;
+        }
       }
 
       &__wrapper {

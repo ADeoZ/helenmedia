@@ -4,6 +4,10 @@
   margin-top: 180px;
   position: relative;
 
+  @include media_undo("tablet-wide") {
+    margin-top: 150px;
+  }
+
   &__controls {
     position: relative;
     width: 100%;
@@ -14,13 +18,19 @@
   &__shorts {
     font-size: 1.375rem;
     font-weight: 350;
-    line-height: 26px;
+    line-height: 1.625rem;
   }
 
   &__shorts_1 {
     position: absolute;
     bottom: 50%;
     left: 0;
+
+    @include media_undo("tablet-wide") {
+      width: 25%;
+      top: 41%;
+      left: 5px;
+    }
   }
 
   &__shorts_2 {
@@ -59,6 +69,11 @@
       position: absolute;
       top: 40px;
       right: 45px;
+
+      @include media_undo("tablet-wide") {
+        top: -20px;
+        right: 20px;
+      }
     }
 
     &_2 {

@@ -7,13 +7,23 @@
 
   &__header {
     margin-bottom: 30px;
+
+    @include media_undo("tablet-wide") {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
   }
 
   &__text {
-    max-width: 770px;
+    max-width: 768px;
     margin-bottom: 50px;
     column-count: 2;
     column-gap: 45px;
+
+    @include media_undo("tablet-wide") {
+      margin-left: 25px;
+      margin-right: 25px;
+    }
 
     p {
       break-inside: avoid;
@@ -27,7 +37,7 @@
     background-color: $blue;
   }
 
-  $itemWidth: 770px;
+  $itemWidth: 768px;
   $itemHeight: 360px;
   .scroller {
     width: 100%;
@@ -83,6 +93,10 @@
       max-width: $itemWidth;
       margin-top: 20px;
       @include mc;
+
+      @include media_undo("tablet-wide") {
+        padding: 0 25px;
+      }
 
       &__next {
         margin-left: 125px;

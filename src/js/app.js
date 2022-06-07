@@ -10,10 +10,20 @@ const services = new Services(
 );
 services.init();
 
+// Mobile Menu
+const menuMobile = new Popup(
+  document.querySelectorAll(".menu__mobile"),
+  document.querySelector("aside.side__menu"),
+  document.querySelectorAll(".header__mobile"),
+  [...document.querySelectorAll(".side__menu .menu__item a"), document.querySelector(".side__menu .close")]
+);
+menuMobile.init();
+
 // Popup
 const popup = new Popup(
   document.querySelectorAll("[data-popup=order]"),
-  document.querySelector("section.popup")
+  document.querySelector("section.popup"),
+  document.querySelectorAll(".header__mobile")
 );
 popup.init();
 

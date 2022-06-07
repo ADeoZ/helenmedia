@@ -38,11 +38,16 @@
     &:first-child {
       border-top: 1px solid $black;
     }
+
+    &__field {
+      padding-right: 15px;
+    }
   }
 
   &__controls {
     @include flex;
-    margin-right: 100px;
+    margin-left: 25px;
+    margin-right: 7%;
     padding: 60px;
     border: 1px solid $black;
     border-radius: 50%;

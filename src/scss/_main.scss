@@ -21,6 +21,10 @@ $arrow-white: url("data:image/svg+xml,%3Csvg%20width%3D%2211%22%20height%3D%2211
 
 html {
   font-size: 16px;
+
+  @include media_undo("tablet-wide") {
+    font-size: 15px;
+  }
 }
 
 body {
@@ -57,6 +61,11 @@ h3 {
   max-width: $maxwidth + 80px;
   margin-top: 200px;
   padding: 0 40px;
+
+  @include media_undo("tablet-wide") {
+    margin-top: 180px;
+    padding: 0 25px;
+  }
 }
 
 .circle {
@@ -80,7 +89,7 @@ h3 {
   height: 50px;
   border: 1px solid $black;
   @include fontCirce;
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: 350;
   transition: background-color 0.2s ease-out;
 

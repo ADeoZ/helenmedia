@@ -30,15 +30,11 @@ $breakpoints: (
   "desktop-wide": 1440px,
 );
 
-@mixin mq($width, $type: min) {
+@mixin media_undo($width) {
   @if map_has_key($breakpoints, $width) {
-    $width: map_get($breakpoints, $width);
+    $width: map_get($breakpoints, $width) - 1px;
 
-    @if $type ==max {
-      $width: $width - 1px;
-    }
-
-    @media only screen and (#{$type}-width: $width) {
+    @media only screen and (max-width: $width) {
       @content;
     }
   }
@@ -69,5 +65,40 @@ $breakpoints: (
     &:after {
       background-image: $arrow-black;
     }
+  }
+}
+
+// close cross-button
+@mixin cross($size: 20px, $color: currentColor, $thickness: 1px) {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  position: relative;
+  width: $size;
+  height: $size;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: ($size - $thickness) / 2;
+    left: 0;
+    right: 0;
+    height: $thickness;
+    background: $color;
+    border-radius: $thickness;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  span {
+    display: block;
   }
 }
