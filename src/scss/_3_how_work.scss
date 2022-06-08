@@ -1,11 +1,26 @@
 .how {
+  @include media_undo("tablet") {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   &__header {
     max-width: 540px;
     margin-bottom: 30px;
+
+    @include media_undo("tablet") {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 
   &__text {
     max-width: 320px;
+
+    @include media_undo("tablet") {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 
   &__button {
@@ -18,9 +33,22 @@
     position: relative;
     background: url("../img/line-how.svg") center center no-repeat;
 
+    @include media_undo("tablet") {
+      height: auto;
+      margin-top: 55px;
+      background-image: url("../img/line-how-mobile.svg");
+    }
+
     &__list {
       list-style-type: none;
       counter-reset: num;
+
+      @include media_undo("tablet") {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin: auto -15px;
+      }
     }
 
     &__item {
@@ -34,10 +62,28 @@
       background-color: $creamy;
 
       @include media_undo("tablet-wide") {
-        width: 410px;
-        height: 200px;
+        width: 100%;
+        min-width: 380px;
+        max-width: 422px;
+        max-height: 208px;     
         padding-left: 40px;
         padding-right: 40px;
+      }
+
+      @include media_undo("tablet") {
+        position: inherit;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+
+        &:nth-child(2n) {
+          align-self: flex-end;
+        }
+
+        &:nth-child(5) {
+          align-self: center;
+        }
       }
 
       &:nth-child(1) {

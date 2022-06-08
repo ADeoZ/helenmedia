@@ -47,6 +47,10 @@ h3 {
   margin-bottom: 90px;
   font-size: 4rem;
   text-transform: uppercase;
+
+  @include media_undo("tablet") {
+    font-size: 7.5vw;
+  }
 }
 
 .main {
@@ -66,6 +70,11 @@ h3 {
     margin-top: 180px;
     padding: 0 25px;
   }
+
+  @include media_undo("tablet") {
+    margin-top: 150px;
+    padding: 0 15px;
+  }
 }
 
 .circle {
@@ -73,6 +82,11 @@ h3 {
   height: 100px;
   border: 1px solid $black;
   border-radius: 50%;
+
+  @include media_undo("tablet") {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .circle-expandable {
@@ -92,6 +106,10 @@ h3 {
   font-size: 18px;
   font-weight: 350;
   transition: background-color 0.2s ease-out;
+
+  @include media_undo("tablet") {
+    font-size: 16px;
+  }
 
   &::after {
     content: "";

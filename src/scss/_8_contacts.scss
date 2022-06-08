@@ -75,6 +75,13 @@
       width: 100%;
       height: 540px;
 
+      @include media_undo("tablet") {
+        height: auto;
+        min-height: 200px;
+        max-width: 100%;
+        aspect-ratio: 3 / 2;
+      }
+
       [class*="gototech"] {
         display: none !important;
       }
