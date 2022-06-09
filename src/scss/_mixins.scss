@@ -82,7 +82,7 @@ $breakpoints: (
   &:after {
     content: "";
     position: absolute;
-    top: ($size - $thickness) / 2;
+    top: calc(($size - $thickness) / 2);
     left: 0;
     right: 0;
     height: $thickness;

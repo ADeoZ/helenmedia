@@ -50,6 +50,7 @@ h3 {
 
   @include media_undo("tablet") {
     font-size: 7.5vw;
+    margin-bottom: 60px;
   }
 }
 
