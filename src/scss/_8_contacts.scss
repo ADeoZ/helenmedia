@@ -5,6 +5,10 @@
   background: url("../img/line-contacts.svg") right top no-repeat;
   overflow: hidden;
 
+  @include media_undo("tablet") {
+    background-size: 200%;
+  }
+
   &__wrapper {
     max-width: $maxwidth;
     @include mc;
@@ -12,22 +16,37 @@
   }
 
   &__header {
-    margin-bottom: 40px;
+    margin-bottom: 0px;
   }
 
   &__arrow {
     width: 53px;
     height: 53px;
+    margin: 40px 0 0px;
+
+    @include media_undo("tablet") {
+      width: 40px;
+      height: 40px;
+      margin: 15px 0 24px;
+    }
   }
 
   &__content {
-    @include flex(space-between, normal);
+    @include flex(space-between, center);
     margin-bottom: 120px;
+
+    @include media_undo("tablet") {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
   }
 
   &__address {
     width: 43%;
-    margin-top: 60px;
+
+    @include media_undo("tablet") {
+      width: 100%;
+    }
   }
 
   .address {
@@ -42,6 +61,10 @@
     &__field {
       padding-right: 15px;
     }
+
+    &__value {
+      text-align: right;
+    }
   }
 
   &__controls {
@@ -52,10 +75,19 @@
     border: 1px solid $black;
     border-radius: 50%;
 
-    &:before {
+    &::before {
       content: "";
       padding-top: 100%;
       height: 0;
+    }
+
+    @include media_undo("tablet") {
+      margin: auto;
+      border: none;
+
+      &::before {
+        content: none;
+      }
     }
   }
 
@@ -77,7 +109,7 @@
 
       @include media_undo("tablet") {
         height: auto;
-        min-height: 200px;
+        min-height: 300px;
         max-width: 100%;
         aspect-ratio: 3 / 2;
       }

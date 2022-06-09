@@ -6,7 +6,7 @@
   @include media_undo("tablet") {
     background-size: 200%;
     background-position: center 20vw;
-  }    
+  }
 
   &__wrapper {
     max-width: 880px;
@@ -27,7 +27,7 @@
       @include media_undo("tablet") {
         margin-left: 3vw;
         margin-right: 3vw;
-      }   
+      }
     }
 
     &::before {
@@ -47,7 +47,7 @@
     @include media_undo("tablet") {
       width: 12vw;
       height: 12vw;
-    }    
+    }
   }
 
   &__circle_1 {
@@ -60,7 +60,7 @@
 
     @include media_undo("tablet") {
       margin-left: -3.6vw;
-    }    
+    }
   }
 
   &__content {
@@ -69,7 +69,7 @@
     @include media_undo("tablet") {
       flex-direction: column;
       gap: 40px;
-    }    
+    }
   }
 
   &__text {

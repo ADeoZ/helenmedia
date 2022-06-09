@@ -23,10 +23,14 @@ menuMobile.init();
 const popup = new Popup(
   document.querySelectorAll("[data-popup=order]"),
   document.querySelector("section.popup"),
-  document.querySelectorAll(".header__mobile")
+  document.querySelectorAll(".header__mobile"),
+  [document.querySelector(".popup button.close")]
 );
 popup.init();
 
 // Form "Order"
 const order = new Order(document.querySelector("form.form_order"), ["email", "phone"]);
 order.init();
+
+// Scrolling to start
+document.querySelector("button[class*='to-start']").addEventListener("click", () => window.scrollTo(0, 0));

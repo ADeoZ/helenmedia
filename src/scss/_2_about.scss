@@ -84,6 +84,7 @@
       }
 
       $childs: 5;
+
       @for $i from 0 to $childs {
         &:nth-child(#{$i + 1}) {
           z-index: $i + 1;

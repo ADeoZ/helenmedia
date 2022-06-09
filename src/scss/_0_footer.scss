@@ -8,6 +8,11 @@
     max-width: $maxwidth;
     @include mc;
     padding: 80px 0 120px;
+
+    @include media_undo("tablet") {
+      justify-content: center;
+      padding: 12vw 0 10vw;
+    }
   }
 
   &__header {
@@ -25,15 +30,47 @@
     @include flex(space-between, flex-start);
     flex-direction: column;
 
+    @include media_undo("tablet") {
+      align-items: center;
+    }
+
     &__button {
       margin: 30px 0 10px;
       @include button(black, $salmon);
+    }
+
+    &__to-start {
+      display: none;
+      margin-top: 30px;
+      border-bottom: 1px solid $white;
+      color: $white;
+      font-size: 16px;
+      font-weight: 350;
+      text-transform: uppercase;
+      line-height: 20px;
+
+      &::after {
+        content: "";
+        width: 11px;
+        height: 11px;
+        background: $arrow-white center no-repeat;
+        margin-left: 0.3rem;
+        transform: rotateZ(315deg)
+      }
+
+      @include media_undo("tablet") {
+        @include flex(center, baseline);
+      }
     }
   }
 
   .menu {
     font-size: 1.125rem;
     line-height: 2.7rem;
+
+    @include media_undo("tablet") {
+      display: none;
+    }
 
     &__item {
       font-weight: 350;
@@ -53,6 +90,10 @@
     font-weight: 350;
     line-height: 1.25rem;
     color: $white;
+
+    @include media_undo("tablet") {
+      display: none;
+    }
 
     a {
       font-weight: 700;

@@ -95,8 +95,9 @@
     background-color: $blue;
   }
 
-  &:hover > &__burger {
+  &:hover>&__burger {
     background-color: $black;
+
     &::before,
     &::after {
       background-color: $black;

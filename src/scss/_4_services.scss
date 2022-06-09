@@ -28,9 +28,9 @@
     overflow: hidden;
 
     @include media_undo("tablet") {
-      height: $rowHeightMobile;      
+      height: $rowHeightMobile;
     }
-    
+
     &__header {
       font-size: 2.25rem;
       text-transform: uppercase;
@@ -72,7 +72,7 @@
     }
 
     &_souvenirs {
-      background: url("../img/services-souvenirs.png") center no-repeat;      
+      background: url("../img/services-souvenirs.png") center no-repeat;
     }
 
     &_design {
@@ -227,7 +227,7 @@
         background-size: 30%;
         background-position: right bottom;
         font-size: 6.5vw;
-      }      
+      }
 
       &_context {
         padding-right: 10%;
@@ -305,10 +305,7 @@
       margin-top: 30px;
       column-count: 2;
       column-gap: 45px;
-
-      @include media_undo("tablet") {
-        column-count: 1;
-      }
+      column-width: 200px;
 
       p {
         margin-bottom: 20px;
@@ -329,9 +326,10 @@
         margin-top: 20px;
         margin-bottom: 20px;
         position: initial;
-      }     
+      }
 
       $size: 40px;
+
       .close {
         @include flex;
         position: absolute;
@@ -349,7 +347,7 @@
           top: 3.25vw;
           right: 2vw;
           font-size: 7vw;
-        }    
+        }
 
         &:hover {
           background-color: $black;
