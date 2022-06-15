@@ -1,22 +1,37 @@
-.title__circle_2 {
-  animation: float 10s alternate-reverse infinite ease-in-out;
+// ANIMATE ELEMENTS
+.animations-slidedown {
+  animation: slidedown 1s, fade 1s forwards;
 }
 
-@keyframes float {
-  0% {
+.animations-countup {
+  animation: fade 0.3s forwards;
+}
+
+[data-animation="slidedown"],
+[data-animation="countup"] {
+  opacity: 0;
+}
+
+@keyframes slidedown {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
     transform: translateY(0);
   }
-  20% {
-    transform: translate(-5px, -5px);
-  }
-  50% {
-    transform: translate(5px, -10px);
-  }
-  80% {
-    transform: translate(-10px, -15px);
-  }
+}
+
+@keyframes spin {
   100% {
-    transform: translate(10px, -20px);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes flip {
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
   }
 }
 
@@ -35,5 +50,58 @@
   }
   to {
     transform: translateX(0);
+  }
+}
+
+// CIRCLES
+
+@keyframes circle_title1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-7px, -10px);
+  }
+  40% {
+    transform: translate(-12px, -17px);
+  }
+  50% {
+    transform: translate(-15px, -20px);
+  }
+  60% {
+    transform: translate(-18px, -17px);
+  }
+  80% {
+    transform: translate(-23px, -10px);
+  }
+  100% {
+    transform: translate(-30px, 0);
+  }
+}
+
+@keyframes circle_title2 {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translate(-5px, -5px);
+  }
+  50% {
+    transform: translate(5px, -10px);
+  }
+  80% {
+    transform: translate(-10px, -15px);
+  }
+  100% {
+    transform: translate(10px, -20px);
+  }
+}
+
+@keyframes circle_start {
+  0% {
+    transform: rotate(0) translate(0, 0);
+  }
+  100% {
+    transform: rotate(-360deg) translate(4vw, 10vw);
   }
 }

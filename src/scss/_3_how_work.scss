@@ -151,6 +151,7 @@
         &_cross {
           width: 57px;
           height: 57px;
+          animation: flip 10s ease-in-out infinite;
         }
 
         &_plus {
@@ -161,6 +162,7 @@
         &_sun {
           width: 68px;
           height: 68px;
+          animation: spin 8s linear infinite;
         }
 
         &_square {

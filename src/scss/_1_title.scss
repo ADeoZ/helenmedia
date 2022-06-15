@@ -93,6 +93,7 @@
       position: absolute;
       top: 40px;
       right: 45px;
+      animation: circle_title1 15s alternate-reverse infinite linear;
 
       @include media_undo("tablet-wide") {
         top: -20px;
@@ -110,6 +111,7 @@
       position: absolute;
       top: 45px;
       left: -120px;
+      animation: circle_title2 10s alternate-reverse infinite ease-in-out;
     }
 
     &_phone {
@@ -124,27 +126,8 @@
         margin: 40px 80px 0;
       }
 
-      &:hover {
+      &:hover, &_hover {
         animation: spin 2s ease-in-out infinite;
-      }
-
-      @-moz-keyframes spin {
-        100% {
-          -moz-transform: rotate(360deg);
-        }
-      }
-
-      @-webkit-keyframes spin {
-        100% {
-          -webkit-transform: rotate(360deg);
-        }
-      }
-
-      @keyframes spin {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
       }
     }
   }

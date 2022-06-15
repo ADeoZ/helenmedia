@@ -1,6 +1,7 @@
 import Services from "./Services";
 import Popup from "./Popup";
 import Order from "./Order";
+import Animations from "./Animations";
 
 // "Services" modal blocks
 const services = new Services(
@@ -34,3 +35,10 @@ order.init();
 
 // Scrolling to start
 document.querySelector("button[class*='to-start']").addEventListener("click", () => window.scrollTo(0, 0));
+
+// ANIMATIONS
+const phoneCircle = document.querySelector(".title__circle_phone");
+document.querySelector("h1.slogan__header").addEventListener("mouseenter", () => phoneCircle.classList.add("title__circle_phone_hover"));
+document.querySelector("h1.slogan__header").addEventListener("mouseleave", () => phoneCircle.classList.remove("title__circle_phone_hover"));
+const animations = new Animations(document.querySelectorAll("[data-animation]"));
+animations.init();

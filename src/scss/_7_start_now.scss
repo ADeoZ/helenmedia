@@ -51,6 +51,7 @@
     top: -105px;
     right: 18%;
     background-color: $blue;
+    animation: circle_start 20s alternate-reverse infinite;
   }
 
   $itemWidth: 768px;
@@ -171,6 +172,12 @@
           height: 26px;
           left: -125px;
           background: url("../img/scroller-next.svg") center no-repeat;
+          transition: transform 0.3s ease-out, transform-origin 0.1s;
+        }
+
+        &:hover::before {
+          transform: scale(1.05);
+          transform-origin: left;
         }
       }
     }
