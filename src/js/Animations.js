@@ -5,6 +5,12 @@ export default class Animations {
     // callbacks for animation types
     this.animationsClasses = {
       slidedown: (element) => this.addAnimationClass(element),
+      slideup: (element) => this.addAnimationClass(element),
+      slideleft: (element) => this.addAnimationClass(element),
+      slideright: (element) => this.addAnimationClass(element),
+      slidedownleft: (element) => this.addAnimationClass(element),
+      scaleup: (element) => this.addAnimationClass(element),
+      scaledown: (element) => this.addAnimationClass(element),
       countup: (element) => this.startCounter(element),
     };
 
@@ -12,7 +18,7 @@ export default class Animations {
   }
 
   init() {
-    this.observer = new IntersectionObserver(this.observerCallback, { rootMargin: "-15%" });
+    this.observer = new IntersectionObserver(this.observerCallback, { rootMargin: "-10%" });
     this.elements.forEach((element) => this.observer.observe(element));
   }
 

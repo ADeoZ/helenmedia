@@ -57,7 +57,7 @@
   <main class="main">
 
     <section class="section title">
-      <div class="title__shorts title__shorts_1">[1] создаём комплексные<br>рекламные кампании</div>
+      <div class="title__shorts title__shorts_1" data-animation="slideleft">[1] создаём комплексные<br>рекламные кампании</div>
 
       <div class="slogan">
         <h1 class="h_header slogan__header">
@@ -67,7 +67,7 @@
         </h1>
       </div>
       <div class="title__controls">
-        <div class="title__shorts title__shorts_2">[2] или подбираем<br>точечное решение</div>
+        <div class="title__shorts title__shorts_2" data-animation="slideright" data-animation-delay="0.5">[2] или подбираем<br>точечное решение</div>
         <button class="button button_order" data-popup="order">Заказать</button>
       </div>
 
@@ -79,7 +79,7 @@
     <section class="section about" id="about">
       <div class="about__wrapper">
         <h2 class="about__header">helen — это</h2>
-        <div class="about__arrow">
+        <div class="about__arrow" data-animation="slidedownleft" data-animation-duration="0.5" data-animation-delay="0.8">
           <svg width="54" height="54">
             <use xlink:href="./img/sprites.svg#arrow"></use>
           </svg>
@@ -102,7 +102,7 @@
         решении ваших вопросов.</p>
       <div class="scheme">
         <ol class="scheme__list">
-          <li class="scheme__item">
+          <li class="scheme__item" data-animation="scaledown">
             <div class="scheme__item__wrapper">
               <div class="scheme__item__icon scheme__item__icon_arrow">
                 <svg>
@@ -112,7 +112,7 @@
               <p class="text scheme__text">первичная консультация для определения ключевых задач</p>
             </div>
           </li>
-          <li class="scheme__item">
+          <li class="scheme__item" data-animation="scaledown" data-animation-delay="0.3">
             <div class="scheme__item__wrapper">
               <div class="scheme__item__icon scheme__item__icon_cross">
                 <svg>
@@ -122,7 +122,7 @@
               <p class="text scheme__text">разработка медиаплана исходя из бизнес логики</p>
             </div>
           </li>
-          <li class="scheme__item">
+          <li class="scheme__item" data-animation="scaledown" data-animation-delay="0.6">
             <div class="scheme__item__wrapper">
               <div class="scheme__item__icon scheme__item__icon_plus">
                 <svg>
@@ -133,7 +133,7 @@
               </p>
             </div>
           </li>
-          <li class="scheme__item">
+          <li class="scheme__item" data-animation="scaledown" data-animation-delay="0.4">
             <div class="scheme__item__wrapper">
               <div class="scheme__item__icon scheme__item__icon_sun">
                 <svg>
@@ -144,7 +144,7 @@
                 конкретному инструменту</p>
             </div>
           </li>
-          <li class="scheme__item">
+          <li class="scheme__item" data-animation="scaledown" data-animation-delay="0.8">
             <div class="scheme__item__wrapper">
               <div class="scheme__item__icon scheme__item__icon_square">
                 <svg>
@@ -426,8 +426,8 @@
     <section class="section your-side">
       <div class="your-side__wrapper">
         <h2 class="h_header your-side__header">Мы <span class="your-side__circles">
-            <div class="circle your-side__circle_1"></div>
-            <div class="circle your-side__circle_2"></div>
+            <div class="circle your-side__circle_1" data-animation="slideright" data-animation-delay="0.3"></div>
+            <div class="circle your-side__circle_2" data-animation="slideleft"></div>
           </span> всегда на вашей стороне</h2>
         <div class="your-side__content">
           <div class="text your-side__text">
@@ -535,7 +535,7 @@
           </li>
         </ul>
         <div class="scroller__controls">
-          <button class="scroller__controls__next">пролистать</button>
+          <button class="scroller__controls__next" data-animation="scaledown" data-animation-duration="0.5">пролистать</button>
         </div>
       </div>
     </section>
@@ -543,7 +543,7 @@
     <section class="section contacts" id="contacts">
       <div class="contacts__wrapper">
         <h2 class="h_header contacts__header">Контакты</h2>
-        <div class="contacts__arrow">
+        <div class="contacts__arrow" data-animation="slidedownleft" data-animation-duration="0.5">
           <svg width="54" height="54">
             <use xlink:href="./img/sprites.svg#arrow"></use>
           </svg>

@@ -128,7 +128,7 @@
     overflow: hidden;
     transition: transform ease-in-out 0.3s;
     position: relative;
-    animation: menuSlide 0.4s;
+    animation: slideleft 0.4s;
 
     .menu {
       &__item {

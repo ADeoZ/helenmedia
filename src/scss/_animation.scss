@@ -1,6 +1,30 @@
-// ANIMATE ELEMENTS
+// MAIN ANIMATIONS FOR PAGE ELEMENTS
 .animations-slidedown {
   animation: slidedown 1s, fade 1s forwards;
+}
+
+.animations-slideup {
+  animation: slideup 1s, fade 1s forwards;
+}
+
+.animations-slideleft {
+  animation: slideleft 1s, fade 1s forwards;
+}
+
+.animations-slideright {
+  animation: slideright 1s, fade 1s forwards;
+}
+
+.animations-slidedownleft {
+  animation: slidedownleft 1s ease-in-out, fade 1s forwards;
+}
+
+.animations-scaleup {
+  animation: scaleup 1s, fade 1s forwards;
+}
+
+.animations-scaledown {
+  animation: scaledown 1s, fade 1s forwards;
 }
 
 .animations-countup {
@@ -8,6 +32,12 @@
 }
 
 [data-animation="slidedown"],
+[data-animation="slideup"],
+[data-animation="slideleft"],
+[data-animation="slideright"],
+[data-animation="slidedownleft"],
+[data-animation="scaleup"],
+[data-animation="scaledown"],
 [data-animation="countup"] {
   opacity: 0;
 }
@@ -18,6 +48,66 @@
   }
   to {
     transform: translateY(0);
+  }
+}
+
+@keyframes slideup {
+  from {
+    transform: translateY(150px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideleft {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideright {
+  from {
+    transform: translateX(150px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slidedownleft {
+  0% {
+    transform: translate(-50px, -50px);
+  }
+  50% {
+    transform: translate(-5px, -5px);
+  }
+  70% {
+    transform: translate(-10px, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes scaleup {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaledown {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
   }
 }
 
@@ -41,15 +131,6 @@
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes menuSlide {
-  from {
-    transform: translateX(-100px);
-  }
-  to {
-    transform: translateX(0);
   }
 }
 
