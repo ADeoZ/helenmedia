@@ -2,8 +2,9 @@ export default class Animations {
   constructor(elements) {
     this.elements = elements;
 
+    // callbacks for animation types
     this.animationsClasses = {
-      slidedown: (element) => this.addAnimationClass(element, "slidedown"),
+      slidedown: (element) => this.addAnimationClass(element),
       countup: (element) => this.startCounter(element),
     };
 
@@ -11,7 +12,7 @@ export default class Animations {
   }
 
   init() {
-    this.observer = new IntersectionObserver(this.observerCallback, { threshold: 0.25 });
+    this.observer = new IntersectionObserver(this.observerCallback, { rootMargin: "-15%" });
     this.elements.forEach((element) => this.observer.observe(element));
   }
 
@@ -26,8 +27,10 @@ export default class Animations {
   }
 
   // add animation css-class
-  addAnimationClass(element, addClass) {
-    element.classList.add(`animations-${addClass}`);
+  addAnimationClass(element) {
+    element.classList.add(`animations-${element.dataset.animation}`);
+    element.style.animationDuration = `${element.dataset.animationDuration}s` || "";
+    element.style.animationDelay = `${element.dataset.animationDelay}s` || "";
   }
 
   // animate count-up
@@ -36,16 +39,18 @@ export default class Animations {
     element.style.width = `${element.offsetWidth}px`;
     this.addAnimationClass(element, "countup");
     element.innerText = "0";
-    this.animateIt(
-      1500,
-      (progress) => {
-        element.innerText = Math.floor(parseInt(endValue) * progress);
-      },
-      () => {
-        element.innerText = endValue;
-        element.style.width = "";
-      }
-    );
+    setTimeout(() => {
+      this.animateIt(
+        element.dataset.animationDuration * 1000 || 1500,
+        (progress) => {
+          element.innerText = Math.floor(parseInt(endValue) * progress);
+        },
+        () => {
+          element.innerText = endValue;
+          element.style.width = "";
+        }
+      );
+    }, element.dataset.animationDelay * 1000 || 0);
   }
 
   // async animation func
