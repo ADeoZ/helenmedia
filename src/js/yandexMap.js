@@ -1,4 +1,4 @@
-import placemarkImage from '../img/yandexmap-placemark.svg';
+import placemarkImage from '../img/static/yandexmap-placemark.svg';
 
 function init() {
   const coords = [55.784720005752, 37.67216091534409]; // координаты точки

@@ -5,10 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="https://helenmedia.ru/local/static/images/favicon.png" sizes="16x16">
-
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=d57024f2-81f0-4c06-9393-f5fc68e4b9c8&lang=ru_RU"
-    type="text/javascript"></script>
+  <link rel="icon" type="image/png" href="https://helenmedia.ru/local/static/images/favicon.png" sizes="16x16"> 
 
   <title>Helen Media</title>
 </head>
@@ -18,7 +15,7 @@
   <header class="header">
     <div class="header__wrapper">
       <div class="logo">
-        <img class="logo__img" src="../src/img/logo.png" alt="Helen Media">
+        <img class="logo__img" src="../src/img/static/logo.png" alt="Helen Media">
       </div>
       <nav class="menu">
         <ul class="menu__list">
@@ -82,7 +79,7 @@
         <h2 class="about__header">helen — это</h2>
         <div class="about__arrow" data-animation="slidedownleft" data-animation-duration="0.5" data-animation-delay="0.8">
           <svg width="54" height="54">
-            <use xlink:href="./img/sprites.svg#arrow"></use>
+            <use xlink:href="./img/static/sprites.svg#arrow"></use>
           </svg>
         </div>
         <p class="text" data-animation="slidedown">Это больше, чем просто реклама для вашего бизнеса. Наш колоссальный опыт работы в сумме с
@@ -107,7 +104,7 @@
             <div class="scheme__item__wrapper">
               <div class="scheme__item__icon scheme__item__icon_arrow">
                 <svg>
-                  <use xlink:href="./img/sprites.svg#arrow"></use>
+                  <use xlink:href="./img/static/sprites.svg#arrow"></use>
                 </svg>
               </div>
               <p class="text scheme__text">первичная консультация для определения ключевых задач</p>
@@ -117,7 +114,7 @@
             <div class="scheme__item__wrapper">
               <div class="scheme__item__icon scheme__item__icon_cross">
                 <svg>
-                  <use xlink:href="./img/sprites.svg#cross"></use>
+                  <use xlink:href="./img/static/sprites.svg#cross"></use>
                 </svg>
               </div>
               <p class="text scheme__text">разработка медиаплана исходя из бизнес логики</p>
@@ -127,7 +124,7 @@
             <div class="scheme__item__wrapper">
               <div class="scheme__item__icon scheme__item__icon_plus">
                 <svg>
-                  <use xlink:href="./img/sprites.svg#plus"></use>
+                  <use xlink:href="./img/static/sprites.svg#plus"></use>
                 </svg>
               </div>
               <p class="text scheme__text">защита медиаплана перед клиентом проектным-менеджером и подготовка КП
@@ -138,7 +135,7 @@
             <div class="scheme__item__wrapper">
               <div class="scheme__item__icon scheme__item__icon_sun">
                 <svg>
-                  <use xlink:href="./img/sprites.svg#sun"></use>
+                  <use xlink:href="./img/static/sprites.svg#sun"></use>
                 </svg>
               </div>
               <p class="text scheme__text">при необходимости подключаем к презентации узкого специалиста по
@@ -149,7 +146,7 @@
             <div class="scheme__item__wrapper">
               <div class="scheme__item__icon scheme__item__icon_square">
                 <svg>
-                  <use xlink:href="./img/sprites.svg#square"></use>
+                  <use xlink:href="./img/static/sprites.svg#square"></use>
                 </svg>
               </div>
               <p class="text scheme__text">заключаем договор и начинаем работу</p>
@@ -487,7 +484,7 @@
           <div class="portfolio__title">Полиграфия</div>
           <div class="portfolio__content">
             <img style="width: auto; height: auto; transform: scale(1.5) rotate(-20.75deg);"
-              src="./img/services-modal-context.png" alt="Заглушка">
+              src="./img/static/services-modal-context.png" alt="Полиграфия">
           </div>
         </li>
       </ul>
@@ -546,7 +543,7 @@
         <h2 class="h_header contacts__header">Контакты</h2>
         <div class="contacts__arrow" data-animation="slidedownleft" data-animation-duration="0.5">
           <svg width="54" height="54">
-            <use xlink:href="./img/sprites.svg#arrow"></use>
+            <use xlink:href="./img/static/sprites.svg#arrow"></use>
           </svg>
         </div>
         <div class="contacts__content">
@@ -584,7 +581,7 @@
   <footer class="footer">
     <div class="footer__wrapper">
       <div class="logo">
-        <img src="./img/logo_footer.png" alt="Helen Media Agency">
+        <img src="./img/static/logo_footer.png" alt="Helen Media Agency">
         <button class="button button_order logo__button" data-popup="order">Заказать звонок</button>
         <button class="logo__to-start">с начала</button>
       </div>
@@ -623,6 +620,7 @@
     </div>
   </section>
 
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=d57024f2-81f0-4c06-9393-f5fc68e4b9c8&lang=ru_RU&load=package.standard"></script>
 </body>
 
 </html>

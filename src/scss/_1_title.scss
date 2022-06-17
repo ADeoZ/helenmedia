@@ -117,7 +117,7 @@
     &_phone {
       margin: 10px 110px 0;
       background-color: black;
-      background: url("../img/phone.png") center center no-repeat;
+      background: url("../img/static/phone.png") center center no-repeat;
       cursor: pointer;
 
       @include media_undo("tablet") {

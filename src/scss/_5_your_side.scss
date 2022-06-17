@@ -1,7 +1,7 @@
 .your-side {
   max-width: 100%;
   margin-top: 160px;
-  background: url("../img/line-your-side.svg") center top no-repeat;
+  background: url("../img/static/line-your-side.svg") center top no-repeat;
 
   @include media_undo("tablet") {
     background-size: 200%;

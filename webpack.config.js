@@ -6,8 +6,9 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
   output: {
-    path: path.resolve(__dirname, './dist'),
     filename: '[name].js',
+    path: path.resolve(__dirname, './dist'),
+    assetModuleFilename: '[name][ext][query]',
   },
   module: {
     rules: [
@@ -41,8 +42,72 @@ module.exports = {
         ],
       },
       {
-        test: /\.(jpe?g|png|gif|svg|eot|ttf|woff2?)$/i,
-        type: 'asset'
+        test: /\.(jpe?g|png|gif|svg?)$/i,
+        include: [
+          path.resolve(__dirname, "src/img/static")
+        ],
+        exclude: [
+          path.resolve(__dirname, "src/img/static/sprites.svg")
+        ],
+        type: 'asset',
+        generator: {
+          filename: 'images/[name][ext][query]'
+        }
+      },
+      {
+        test: /sprites\.svg?$/i,
+        include: [
+          path.resolve(__dirname, "src/img/static")
+        ],
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 0
+          }
+        },
+        generator: {
+          filename: 'images/[name][ext][query]'
+        }
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg?)$/i,
+        include: [
+          path.resolve(__dirname, "src/img/portfolio")
+        ],
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 0
+          }
+        },
+        generator: {
+          filename: 'images/portfolio/[hash][ext][query]'
+        }
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg?)$/i,
+        include: [
+          path.resolve(__dirname, "src/img/scroller")
+        ],
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 0
+          }
+        },
+        generator: {
+          filename: 'images/scroller/[hash][ext][query]'
+        }
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2|svg?)$/i,
+        include: [
+          path.resolve(__dirname, "src/fonts")
+        ],
+        type: 'asset',
+        generator: {
+          filename: 'fonts/[name][ext][query]'
+        }
       }
     ],
   },

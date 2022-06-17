@@ -31,12 +31,12 @@
     height: 715px;
     margin-bottom: 55px;
     position: relative;
-    background: url("../img/line-how.svg") center center no-repeat;
+    background: url("../img/static/line-how.svg") center center no-repeat;
 
     @include media_undo("tablet") {
       height: auto;
       margin-top: 55px;
-      background-image: url("../img/line-how-mobile.svg");
+      background-image: url("../img/static/line-how-mobile.svg");
     }
 
     &__list {
