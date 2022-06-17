@@ -18,7 +18,7 @@ export default class Animations {
   }
 
   init() {
-    this.observer = new IntersectionObserver(this.observerCallback, { rootMargin: "-10%" });
+    this.observer = new IntersectionObserver(this.observerCallback, { rootMargin: "-10% 0px -10% 0px" });
     this.elements.forEach((element) => this.observer.observe(element));
   }
 
