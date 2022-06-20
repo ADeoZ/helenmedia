@@ -20,6 +20,7 @@
   }
 
   &__text {
+    width: 100%;
     max-width: 768px;
     margin-bottom: 50px;
     column-count: 2;
@@ -27,18 +28,19 @@
     column-gap: 45px;
 
     @include media_undo("tablet-wide") {
-      margin-left: 25px;
-      margin-right: 25px;
+      padding-left: 25px;
+      padding-right: 25px;
     }
 
     @include media_undo("tablet") {
-      margin-left: 15px;
-      margin-right: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
     }
 
     p {
       margin-bottom: 20px;
       break-inside: avoid;
+      overflow: hidden; // for Firefox
 
       &:last-child {
         margin-bottom: 0;
