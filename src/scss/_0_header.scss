@@ -95,7 +95,7 @@
     background-color: $blue;
   }
 
-  &:hover>&__burger {
+  &:hover > &__burger {
     background-color: $black;
 
     &::before,
@@ -147,13 +147,13 @@
     }
 
     .close {
+      @include flex;
       position: absolute;
       top: 13px;
       right: 13px;
 
       &__cross {
         @include cross(24px, $white, 2px);
-        cursor: pointer;
       }
     }
   }

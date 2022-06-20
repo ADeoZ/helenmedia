@@ -25,7 +25,6 @@
     @include flex;
     padding: 35px;
     border-bottom: 1px solid $black;
-    @include fontDela;
     font-size: 2.25rem;
     text-align: center;
   }
@@ -46,7 +45,7 @@
     height: 1em;
     border-radius: 50%;
     cursor: pointer;
-    transition: all 0.2s ease-out;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
     font-size: $size;
 
     &:hover {

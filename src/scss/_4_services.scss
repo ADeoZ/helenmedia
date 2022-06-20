@@ -61,6 +61,8 @@
 
     &_empty {
       padding: 0;
+      background: url("../img/static/circle-empty.svg") center no-repeat;
+      background-size: contain;
 
       @include media_undo("tablet") {
         display: none;
@@ -340,7 +342,7 @@
         border: 1px solid $black;
         border-radius: 50%;
         cursor: pointer;
-        transition: background-color 0.2s ease-out;
+        transition: background-color 0.2s ease-out, color 0.2s ease-out;
         font-size: $size;
 
         @include media_undo("tablet") {
@@ -355,7 +357,7 @@
         }
 
         &__cross {
-          @include cross(.55em, currentColor, 1px);
+          @include cross(0.55em, currentColor, 1px);
         }
       }
 

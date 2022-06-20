@@ -36,7 +36,7 @@ export default class Services {
       .join("");
 
     // get modal by link
-    this.modal = this.parent.querySelector(`div.${this.currentLink.dataset[dataSetName]}`);
+    this.modal = this.parent.querySelector(`li.${this.currentLink.dataset[dataSetName]}`);
 
     // positioning modal block in list
     this.calcPosition(this.currentLink.closest(this.linkListItemClass)).after(this.modal);
@@ -59,7 +59,7 @@ export default class Services {
   // close block
   closeModal() {
     if (!this.modal) return;
-    
+
     // animation
     const targetElem = this.modal;
     const result = this.modal.offsetHeight;

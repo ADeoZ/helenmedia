@@ -73,6 +73,12 @@
   &__content {
     @include flex;
     height: calc(100% - $titleHeight);
+    background: url("../img/static/circle-empty.svg") center no-repeat;
+    background-size: contain;
+
+    &_nonebackground {
+      background: none;
+    }
   }
 
   &__button {
